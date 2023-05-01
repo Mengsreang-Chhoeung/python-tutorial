@@ -952,8 +952,8 @@ Other escape characters used in Python:
 
 | Code | Result          |
 | ---- | --------------- |
-| \'   | Single Quote    |
-| \\   | Backslash       |
+| \\'  | Single Quote    |
+| \\\  | Backslash       |
 | \n   | New Line        |
 | \r   | Carriage Return |
 | \t   | Tab             |
