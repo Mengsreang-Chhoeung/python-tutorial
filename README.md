@@ -47,6 +47,12 @@ It is used for:
 
 [🔼 Back to top](#python-tutorial)
 
+## Python Installation Guide
+
+For this guide, you can checkout this [blog](https://realpython.com/installing-python) from [Real Python](https://realpython.com).
+
+[🔼 Back to top](#python-tutorial)
+
 ### 📜 References
 
 - [W3Schools](https://www.w3schools.com/python)
