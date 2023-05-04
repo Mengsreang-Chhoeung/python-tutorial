@@ -63,20 +63,20 @@ Comments can be used to prevent execution when testing code.
 
 Comments starts with a `#`, and Python will ignore them:
 
-```python
+```py
 #This is a comment
 print("Hello, World!")
 ```
 
 Comments can be placed at the end of a line, and Python will ignore the rest of the line:
 
-```python
+```py
 print("Hello, World!") #This is a comment
 ```
 
 A comment does not have to be text that explains the code, it can also be used to prevent Python from executing code:
 
-```python
+```py
 #print("Hello, World!")
 print("Cheers, Mate!")
 ```
@@ -87,7 +87,7 @@ Python does not really have a syntax for multiline comments.
 
 To add a multiline comment you could insert a `#` for each line:
 
-```python
+```py
 #This is a comment
 #written in
 #more than just one line
@@ -98,7 +98,7 @@ Or, not quite as intended, you can use a multiline string.
 
 Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it:
 
-```python
+```py
 """
 This is a comment
 written in
@@ -121,7 +121,7 @@ Python has no command for declaring a variable.
 
 A variable is created the moment you first assign a value to it.
 
-```python
+```py
 x = 5
 y = "John"
 print(x)
@@ -130,7 +130,7 @@ print(y)
 
 Variables do not need to be declared with any particular _type_, and can even change type after they have been set.
 
-```python
+```py
 x = 4       # x is of type int
 x = "Sally" # x is now of type str
 print(x)
@@ -140,7 +140,7 @@ print(x)
 
 If you want to specify the data type of a variable, this can be done with casting.
 
-```python
+```py
 x = str(3)    # x will be '3'
 y = int(3)    # y will be 3
 z = float(3)  # z will be 3.0
@@ -150,7 +150,7 @@ z = float(3)  # z will be 3.0
 
 You can get the data type of a variable with the `type()` function.
 
-```python
+```py
 x = 5
 y = "John"
 print(type(x))
@@ -161,7 +161,7 @@ print(type(y))
 
 String variables can be declared either by using single or double quotes:
 
-```python
+```py
 x = "John"
 # is the same as
 x = 'John'
@@ -171,7 +171,7 @@ x = 'John'
 
 Variable names are case-sensitive.
 
-```python
+```py
 # This will create two variables:
 a = 4
 A = "Sally"
@@ -190,7 +190,7 @@ A variable can have a short name (like x and y) or a more descriptive name (age,
 - Variable names are case-sensitive (age, Age and AGE are three different variables)
 - A variable name cannot be any of the [Python keywords](https://www.w3schools.com/python/python_ref_keywords.asp).
 
-```python
+```py
 # Legal variable names:
 myvar = "John"
 my_var = "John"
@@ -200,7 +200,7 @@ MYVAR = "John"
 myvar2 = "John"
 ```
 
-```python
+```py
 # Illegal variable names:
 2myvar = "John"
 my-var = "John"
@@ -219,7 +219,7 @@ There are several techniques you can use to make them more readable:
 
 Each word, except the first, starts with a capital letter:
 
-```python
+```py
 myVariableName = "John"
 ```
 
@@ -227,7 +227,7 @@ myVariableName = "John"
 
 Each word starts with a capital letter:
 
-```python
+```py
 MyVariableName = "John"
 ```
 
@@ -235,7 +235,7 @@ MyVariableName = "John"
 
 Each word is separated by an underscore character:
 
-```python
+```py
 my_variable_name = "John"
 ```
 
@@ -245,7 +245,7 @@ my_variable_name = "John"
 
 Python allows you to assign values to multiple variables in one line:
 
-```python
+```py
 x, y, z = "Orange", "Banana", "Cherry"
 print(x)
 print(y)
@@ -258,7 +258,7 @@ print(z)
 
 And you can assign the same value to multiple variables in one line:
 
-```python
+```py
 x = y = z = "Orange"
 print(x)
 print(y)
@@ -269,7 +269,7 @@ print(z)
 
 If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called _unpacking_.
 
-```python
+```py
 # Unpack a list:
 fruits = ["apple", "banana", "cherry"]
 x, y, z = fruits
@@ -284,14 +284,14 @@ print(z)
 
 The Python `print()` function is often used to output variables.
 
-```python
+```py
 x = "Python is awesome"
 print(x)
 ```
 
 In the `print()` function, you output multiple variables, separated by a `comma`:
 
-```python
+```py
 x = "Python"
 y = "is"
 z = "awesome"
@@ -300,7 +300,7 @@ print(x, y, z)
 
 You can also use the `+` operator to output multiple variables:
 
-```python
+```py
 x = "Python "
 y = "is "
 z = "awesome"
@@ -311,7 +311,7 @@ print(x + y + z)
 
 For numbers, the `+` character works as a mathematical operator:
 
-```python
+```py
 x = 5
 y = 10
 print(x + y)
@@ -319,7 +319,7 @@ print(x + y)
 
 In the `print()` function, when you try to combine a string and a number with the `+` operator, Python will give you an error:
 
-```python
+```py
 x = 5
 y = "John"
 print(x + y)
@@ -327,7 +327,7 @@ print(x + y)
 
 The best way to output multiple variables in the `print()` function is to separate them with commas, which even support different data types:
 
-```python
+```py
 x = 5
 y = "John"
 print(x, y)
@@ -341,7 +341,7 @@ Variables that are created outside of a function (as in all of the examples abov
 
 Global variables can be used by everyone, both inside of functions and outside.
 
-```python
+```py
 # Create a variable outside of a function, and use it inside the function
 x = "awesome"
 
@@ -353,7 +353,7 @@ myfunc()
 
 If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.
 
-```python
+```py
 # Create a variable inside a function, with the same name as the global variables
 x = "awesome"
 
@@ -372,7 +372,7 @@ Normally, when you create a variable inside a function, that variable is local, 
 
 To create a global variable inside a function, you can use the `global` keyword.
 
-```python
+```py
 # If you use the global keyword, the variable belongs to the global scope:
 def myfunc():
   global x
@@ -385,7 +385,7 @@ print("Python is " + x)
 
 Also, use the `global` keyword if you want to change a global variable inside a function.
 
-```python
+```py
 # To change the value of a global variable inside a function, refer to the variable by using the global keyword:
 x = "awesome"
 
@@ -423,7 +423,7 @@ Python has the following data types built-in by default, in these categories:
 
 You can get the data type of any object by using the `type()` function:
 
-```python
+```py
 # Print the data type of the variable x:
 x = 5
 print(type(x))
@@ -484,7 +484,7 @@ There are three numeric types in Python:
 
 Variables of numeric types are created when you assign a value to them:
 
-```python
+```py
 x = 1    # int
 y = 2.8  # float
 z = 1j   # complex
@@ -492,7 +492,7 @@ z = 1j   # complex
 
 To verify the type of any object in Python, use the `type()` function:
 
-```python
+```py
 print(type(x))
 print(type(y))
 print(type(z))
@@ -502,7 +502,7 @@ print(type(z))
 
 Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.
 
-```python
+```py
 # Integers:
 x = 1
 y = 35656222554887711
@@ -517,7 +517,7 @@ print(type(z))
 
 Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
 
-```python
+```py
 # Floats:
 x = 1.10
 y = 1.0
@@ -530,7 +530,7 @@ print(type(z))
 
 Float can also be scientific numbers with an "e" to indicate the power of 10.
 
-```python
+```py
 # Floats:
 x = 35e3
 y = 12E4
@@ -545,7 +545,7 @@ print(type(z))
 
 Complex numbers are written with a "j" as the imaginary part:
 
-```python
+```py
 # Complex:
 x = 3+5j
 y = 5j
@@ -560,7 +560,7 @@ print(type(z))
 
 You can convert from one type to another with the `int()`, `float()`, and `complex()` methods:
 
-```python
+```py
 # Convert from one type to another:
 x = 1    # int
 y = 2.8  # float
@@ -590,7 +590,7 @@ print(type(c))
 
 Python does not have a `random()` function to make a random number, but Python has a built-in module called `random` that can be used to make random numbers:
 
-```python
+```py
 # Import the random module, and display a random number between 1 and 9:
 import random
 
@@ -611,14 +611,14 @@ Casting in python is therefore done using constructor functions:
 - `float()` - constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)
 - `str()` - constructs a string from a wide variety of data types, including strings, integer literals and float literals
 
-```python
+```py
 # Integers:
 x = int(1)   # x will be 1
 y = int(2.8) # y will be 2
 z = int("3") # z will be 3
 ```
 
-```python
+```py
 # Floats:
 x = float(1)     # x will be 1.0
 y = float(2.8)   # y will be 2.8
@@ -626,7 +626,7 @@ z = float("3")   # z will be 3.0
 w = float("4.2") # w will be 4.2
 ```
 
-```python
+```py
 # Strings:
 x = str("s1") # x will be 's1'
 y = str(2)    # y will be '2'
@@ -643,7 +643,7 @@ Strings in python are surrounded by either single quotation marks, or double quo
 
 You can display a string literal with the `print()` function:
 
-```python
+```py
 print("Hello")
 print('Hello')
 ```
@@ -652,7 +652,7 @@ print('Hello')
 
 Assigning a string to a variable is done with the variable name followed by an equal sign and the string:
 
-```python
+```py
 a = "Hello"
 print(a)
 ```
@@ -661,7 +661,7 @@ print(a)
 
 You can assign a multiline string to a variable by using three quotes:
 
-```python
+```py
 # You can use three double quotes:
 a = """Lorem ipsum dolor sit amet,
 consectetur adipiscing elit,
@@ -672,7 +672,7 @@ print(a)
 
 Or three single quotes:
 
-```python
+```py
 a = '''Lorem ipsum dolor sit amet,
 consectetur adipiscing elit,
 sed do eiusmod tempor incididunt
@@ -690,7 +690,7 @@ However, Python does not have a character data type, a single character is simpl
 
 Square brackets can be used to access elements of the string.
 
-```python
+```py
 # Get the character at position 1 (remember that the first character has the position 0):
 a = "Hello, World!"
 print(a[1])
@@ -700,7 +700,7 @@ print(a[1])
 
 Since strings are arrays, we can loop through the characters in a string, with a `for` loop.
 
-```python
+```py
 # Loop through the letters in the word "banana":
 for x in "banana":
   print(x)
@@ -710,7 +710,7 @@ for x in "banana":
 
 To get the length of a string, use the `len()` function.
 
-```python
+```py
 # The len() function returns the length of a string:
 a = "Hello, World!"
 print(len(a))
@@ -720,7 +720,7 @@ print(len(a))
 
 To check if a certain phrase or character is present in a string, we can use the keyword `in`.
 
-```python
+```py
 # Check if "free" is present in the following text:
 txt = "The best things in life are free!"
 print("free" in txt)
@@ -728,7 +728,7 @@ print("free" in txt)
 
 Use it in an `if` statement:
 
-```python
+```py
 # Print only if "free" is present:
 txt = "The best things in life are free!"
 if "free" in txt:
@@ -739,7 +739,7 @@ if "free" in txt:
 
 To check if a certain phrase or character is NOT present in a string, we can use the keyword `not in`.
 
-```python
+```py
 # Check if "expensive" is NOT present in the following text:
 txt = "The best things in life are free!"
 print("expensive" not in txt)
@@ -747,7 +747,7 @@ print("expensive" not in txt)
 
 Use it in an `if` statement:
 
-```python
+```py
 # print only if "expensive" is NOT present:
 txt = "The best things in life are free!"
 if "expensive" not in txt:
@@ -762,7 +762,7 @@ You can return a range of characters by using the slice syntax.
 
 Specify the start index and the end index, separated by a colon, to return a part of the string.
 
-```python
+```py
 # Get the characters from position 2 to position 5 (not included):
 b = "Hello, World!"
 print(b[2:5])
@@ -774,7 +774,7 @@ print(b[2:5])
 
 By leaving out the start index, the range will start at the first character:
 
-```python
+```py
 # Get the characters from the start to position 5 (not included):
 b = "Hello, World!"
 print(b[:5])
@@ -784,7 +784,7 @@ print(b[:5])
 
 By leaving out the end index, the range will go to the end:
 
-```python
+```py
 # Get the characters from position 2, and all the way to the end:
 b = "Hello, World!"
 print(b[2:])
@@ -794,7 +794,7 @@ print(b[2:])
 
 Use negative indexes to start the slice from the end of the string:
 
-```python
+```py
 
 Example
 # Get the characters:
@@ -812,7 +812,7 @@ Python has a set of built-in methods that you can use on strings.
 
 #### Upper Case
 
-```python
+```py
 # The upper() method returns the string in upper case:
 a = "Hello, World!"
 print(a.upper())
@@ -820,7 +820,7 @@ print(a.upper())
 
 #### Lower Case
 
-```python
+```py
 # The lower() method returns the string in lower case:
 a = "Hello, World!"
 print(a.lower())
@@ -830,7 +830,7 @@ print(a.lower())
 
 Whitespace is the space before and/or after the actual text, and very often you want to remove this space.
 
-```python
+```py
 # The strip() method removes any whitespace from the beginning or the end:
 a = " Hello, World! "
 print(a.strip()) # returns "Hello, World!"
@@ -838,7 +838,7 @@ print(a.strip()) # returns "Hello, World!"
 
 #### Replace String
 
-```python
+```py
 # The replace() method replaces a string with another string:
 a = "Hello, World!"
 print(a.replace("H", "J"))
@@ -848,7 +848,7 @@ print(a.replace("H", "J"))
 
 The `split()` method returns a list where the text between the specified separator becomes the list items.
 
-```python
+```py
 # The split() method splits the string into substrings if it finds instances of the separator:
 a = "Hello, World!"
 print(a.split(",")) # returns ['Hello', ' World!']
@@ -864,7 +864,7 @@ Learn more about String Methods with our [String Methods Reference](https://www.
 
 To concatenate, or combine, two strings you can use the + operator.
 
-```python
+```py
 # Merge variable a with variable b into variable c:
 a = "Hello"
 b = "World"
@@ -872,7 +872,7 @@ c = a + b
 print(c)
 ```
 
-```python
+```py
 # To add a space between them, add a " ":
 
 a = "Hello"
@@ -887,7 +887,7 @@ print(c)
 
 As we learned in the Python Variables chapter, we cannot combine strings and numbers like this:
 
-```python
+```py
 age = 36
 txt = "My name is John, I am " + age
 print(txt)
@@ -897,7 +897,7 @@ But we can combine strings and numbers by using the `format()` method!
 
 The `format()` method takes the passed arguments, formats them, and places them in the string where the placeholders `{}` are:
 
-```python
+```py
 # Use the format() method to insert numbers into strings:
 age = 36
 txt = "My name is John, and I am {}"
@@ -906,7 +906,7 @@ print(txt.format(age))
 
 The `format()` method takes unlimited number of arguments, and are placed into the respective placeholders:
 
-```python
+```py
 quantity = 3
 itemno = 567
 price = 49.95
@@ -916,7 +916,7 @@ print(myorder.format(quantity, itemno, price))
 
 You can use index numbers `{0}` to be sure the arguments are placed in the correct placeholders:
 
-```python
+```py
 quantity = 3
 itemno = 567
 price = 49.95
@@ -934,14 +934,14 @@ An escape character is a backslash `\` followed by the character you want to ins
 
 An example of an illegal character is a double quote inside a string that is surrounded by double quotes:
 
-```python
+```py
 # You will get an error if you use double quotes inside a string that is surrounded by double quotes:
 txt = "We are the so-called "Vikings" from the north."
 ```
 
 To fix this problem, use the escape character `\"`:
 
-```python
+```py
 # The escape character allows you to use double quotes when you normally would not be allowed:
 txt = "We are the so-called \"Vikings\" from the north."
 ```
@@ -1031,7 +1031,7 @@ You can evaluate any expression in Python, and get one of two answers, `True` or
 
 When you compare two values, the expression is evaluated and Python returns the Boolean answer:
 
-```python
+```py
 print(10 > 9)
 print(10 == 9)
 print(10 < 9)
@@ -1039,7 +1039,7 @@ print(10 < 9)
 
 When you run a condition in an if statement, Python returns `True` or `False`:
 
-```python
+```py
 # Print a message based on whether the condition is True or False:
 a = 200
 b = 33
@@ -1054,13 +1054,13 @@ else:
 
 The `bool()` function allows you to evaluate any value, and give you `True` or `False` in return.
 
-```python
+```py
 # Evaluate a string and a number:
 print(bool("Hello"))
 print(bool(15))
 ```
 
-```python
+```py
 # Evaluate two variables:
 x = "Hello"
 y = 15
@@ -1079,7 +1079,7 @@ Any number is `True`, except `0`.
 
 Any list, tuple, set, and dictionary are `True`, except `empty ones`.
 
-```python
+```py
 # The following will return True:
 bool("abc")
 bool(123)
@@ -1090,7 +1090,7 @@ bool(["apple", "cherry", "banana"])
 
 In fact, there are not many values that evaluate to `False`, except empty values, such as `()`, `[]`, `{}`, `""`, the number `0`, and the value `None`. And of course the value `False` evaluates to `False`.
 
-```python
+```py
 # The following will return False:
 bool(False)
 bool(None)
@@ -1103,7 +1103,7 @@ bool({})
 
 One more value, or object in this case, evaluates to `False`, and that is if you have an object that is made from a class with a `__len__` function that returns `0` or `False`:
 
-```python
+```py
 class myclass():
   def __len__(self):
     return 0
@@ -1116,7 +1116,7 @@ print(bool(myobj))
 
 You can create functions that returns a Boolean Value:
 
-```python
+```py
 # Print the answer of a function:
 def myFunction() :
   return True
@@ -1126,7 +1126,7 @@ print(myFunction())
 
 You can execute code based on the Boolean answer of a function:
 
-```python
+```py
 # Print "YES!" if the function returns True, otherwise print "NO!":
 def myFunction() :
   return True
@@ -1139,7 +1139,7 @@ else:
 
 Python also has many built-in functions that return a boolean value, like the `isinstance()` function, which can be used to determine if an object is of a certain data type:
 
-```python
+```py
 # Check if an object is an integer or not:
 x = 200
 print(isinstance(x, int))
@@ -1153,7 +1153,7 @@ Operators are used to perform operations on variables and values.
 
 In the example below, we use the `+` operator to add together two values:
 
-```python
+```py
 print(10 + 5)
 ```
 
@@ -1259,12 +1259,12 @@ Bitwise operators are used to compare (binary) numbers:
 
 Operator precedence describes the order in which operations are performed.
 
-```python
+```py
 # Parentheses has the highest precedence, meaning that expressions inside parentheses must be evaluated first:
 print((6 + 3) - (6 + 3))
 ```
 
-```python
+```py
 # Multiplication * has higher precedence than addition +, and therefor multiplications are evaluated before additions:
 print(100 + 5 * 3)
 ```
@@ -1289,10 +1289,244 @@ The precedence order is described in the table below, starting with the highest 
 
 If two operators have the same precedence, the expression is evaluated from left to right.
 
-```python
+```py
 # Addition + and subtraction - has the same precedence, and therefor we evaluate the expression from left to right:
 print(5 + 4 - 7 + 3)
 ```
+
+[🔼 Back to top](#python-tutorial)
+
+### Python Lists
+
+Lists are used to store multiple items in a single variable.
+
+Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
+
+Lists are created using square brackets:
+
+```py
+# Create a List:
+thislist = ["apple", "banana", "cherry"]
+print(thislist)
+```
+
+### List Items
+
+List items are ordered, changeable, and allow duplicate values.
+
+List items are indexed, the first item has index `[0]`, the second item has index `[1]` etc.
+
+### Ordered
+
+When we say that lists are ordered, it means that the items have a defined order, and that order will not change.
+
+If you add new items to a list, the new items will be placed at the end of the list.
+
+> **Note:** There are some [list methods](https://www.w3schools.com/python/python_lists_methods.asp) that will change the order, but in general: the order of the items will not change.
+
+### Changeable
+
+The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
+
+### Allow Duplicates
+
+Since lists are indexed, lists can have items with the same value:
+
+```py
+# Lists allow duplicate values:
+thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+print(thislist)
+```
+
+### List Length
+
+To determine how many items a list has, use the `len()` function:
+
+```py
+# Print the number of items in the list:
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist))
+```
+
+### List Items - Data Types
+
+List items can be of any data type:
+
+```py
+# String, int and boolean data types:
+list1 = ["apple", "banana", "cherry"]
+list2 = [1, 5, 7, 9, 3]
+list3 = [True, False, False]
+```
+
+A list can contain different data types:
+
+```py
+# A list with strings, integers and boolean values:
+list1 = ["abc", 34, True, 40, "male"]
+```
+
+### `type()`
+
+From Python's perspective, lists are defined as objects with the data type 'list':
+
+```py
+<class 'list'>
+```
+
+```py
+#What is the data type of a list?
+mylist = ["apple", "banana", "cherry"]
+print(type(mylist))
+```
+
+### The `list()` Constructor
+
+It is also possible to use the list() constructor when creating a new list.
+
+```py
+# Using the list() constructor to make a List:
+thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
+print(thislist)
+```
+
+[🔼 Back to top](#python-tutorial)
+
+### Access Items
+
+List items are indexed and you can access them by referring to the index number:
+
+```py
+#Print the second item of the list:
+thislist = ["apple", "banana", "cherry"]
+print(thislist[1])
+```
+
+> **Note:** The first item has index 0.
+
+#### Negative Indexing
+
+Negative indexing means start from the end
+
+`-1` refers to the last item, `-2` refers to the second last item etc.
+
+```py
+# Print the last item of the list:
+thislist = ["apple", "banana", "cherry"]
+print(thislist[-1])
+```
+
+#### Range of Indexes
+
+You can specify a range of indexes by specifying where to start and where to end the range.
+
+When specifying a range, the return value will be a new list with the specified items.
+
+```py
+# Return the third, fourth, and fifth item:
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5])
+```
+
+> **Note:** The search will start at index 2 (included) and end at index 5 (not included).
+
+> Remember that the first item has index 0.
+
+By leaving out the start value, the range will start at the first item:
+
+```py
+# This example returns the items from the beginning to, but NOT including, "kiwi":
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[:4])
+```
+
+By leaving out the end value, the range will go on to the end of the list:
+
+```py
+# This example returns the items from "cherry" to the end:
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:])
+```
+
+#### Range of Negative Indexes
+
+Specify negative indexes if you want to start the search from the end of the list:
+
+```py
+# This example returns the items from "orange" (-4) to, but NOT including "mango" (-1):
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[-4:-1])
+```
+
+### Check if Item Exists
+
+To determine if a specified item is present in a list use the `in` keyword:
+
+```py
+# Check if "apple" is present in the list:
+thislist = ["apple", "banana", "cherry"]
+if "apple" in thislist:
+  print("Yes, 'apple' is in the fruits list")
+```
+
+[🔼 Back to top](#python-tutorial)
+
+### Change Item Value
+
+To change the value of a specific item, refer to the index number:
+
+```py
+# Change the second item:
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+```
+
+### Change a Range of Item Values
+
+To change the value of items within a specific range, define a list with the new values, and refer to the range of index numbers where you want to insert the new values:
+
+```py
+# Change the values "banana" and "cherry" with the values "blackcurrant" and "watermelon":
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]
+print(thislist)
+```
+
+If you insert more items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly:
+
+```py
+#Change the second value by replacing it with two new values:
+thislist = ["apple", "banana", "cherry"]
+thislist[1:2] = ["blackcurrant", "watermelon"]
+print(thislist)
+```
+
+> **Note:** The length of the list will change when the number of items inserted does not match the number of items replaced.
+
+If you insert _less_ items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly:
+
+```py
+# Change the second and third value by replacing it with one value:
+thislist = ["apple", "banana", "cherry"]
+thislist[1:3] = ["watermelon"]
+print(thislist)
+```
+
+### Insert Items
+
+To insert a new list item, without replacing any of the existing values, we can use the `insert()` method.
+
+The `insert()` method inserts an item at the specified index:
+
+```py
+# Insert "watermelon" as the third item:
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+```
+
+> **Note:** As a result of the example above, the list will now contain 4 items.
 
 [🔼 Back to top](#python-tutorial)
 
